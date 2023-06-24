@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  namespace :api do
-    namespace :v1 do
-      resources :products, except: [:new, :edit]
-    end
+  scope module: :api do
+    resources :products
   end
+  root "dashboards#index"
 end
-

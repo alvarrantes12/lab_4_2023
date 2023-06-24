@@ -1,2 +1,18 @@
 es:
-  hello: "Hello world"
+  es:
+  activerecord:
+    attributes:
+      product:
+        name: Nombre
+        price: Precio
+    modules:
+      product:
+        one: Producto
+        other: Productos
+    errors:
+      models:
+        product: 
+          attributes:
+            name:
+              blank: se necesita este campo
+              

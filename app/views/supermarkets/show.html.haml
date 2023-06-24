@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b First name:
+  = @supermarket.first_name
+
+= link_to 'Editar', edit_supermarket_path(@supermarket)
+\|
+= link_to 'Volver', supermarkets_path

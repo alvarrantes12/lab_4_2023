@@ -1,0 +1,22 @@
+%h1 Lista de Supermercados
+
+%table
+  %thead
+    %tr
+      %th Nombre
+      %th
+      %th
+      %th
+
+  %tbody
+    - @supermarkets.each do |supermarket|
+      %tr
+        %td= supermarket.first_name
+        %td= link_to 'Mostrar', supermarket
+        %td= link_to 'Editar', edit_supermarket_path(supermarket)
+        %td= button_to 'Eliminar', supermarket, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'Nuevo Supermercado', new_supermarket_path
+= link_to 'Volver', root_path

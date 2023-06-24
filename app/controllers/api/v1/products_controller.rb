@@ -1,5 +1,6 @@
 class Api::V1::ProductsController < ApplicationController
-  before_action :set_api_v1_product, only: %i[ show edit update destroy ]
+  before_action :set_product, only: %i[ show edit update destroy ]
+
       def index
         @products = Product.all
         render json: @products
@@ -41,5 +42,4 @@ class Api::V1::ProductsController < ApplicationController
       def product_params
         params.require(:product).permit(:name, :price)
       end
-  end
 end
